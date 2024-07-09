@@ -5,7 +5,7 @@ function App() {
     const[length, setLength] = useState(8);
     const[numberAllowed, setNumberAllowed] = useState(false);
     const[charAllowed, setCharAllowed] = useState(false);
-    const [password, setPassword] = useState("");
+    const[password, setPassword] = useState("");
     const passwordRef = useRef(null);
 
     const passwordGenerator = useCallback(()=>{
@@ -39,7 +39,7 @@ function App() {
                     {/* input box and copy button container */}
                     <div className="flex justify-center items-center rounded-xl overflow-hidden">
                         <input className='text-5xl text-blue-600 font-semibold outline-none p-2 ' type="text" value={password} ref={passwordRef}/>
-                        <button className='text-5xl bg-slate-950 text-blue-700 font-semibold outline-none px-2 py-4' onClick={copyToClipboard}>copy</button>
+                        <button className='text-5xl bg-slate-950 text-blue-700 font-semibold outline-none px-2 py-4 active:bg-blue-400 active:text-black hover:text-black hover:bg-slate-400' onClick={copyToClipboard}>copy</button>
                     </div>
 
                     {/* // 2nd row contains slide number checkbox characters checkbox */}
